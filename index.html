@@ -33,7 +33,6 @@
             padding: 0 20px;
         }
 
-        /* Header */
         header {
             padding: 40px 0;
             text-align: center;
@@ -45,11 +44,10 @@
             margin-bottom: 20px;
         }
 
-        /* Hero */
         .hero {
             text-align: center;
-            padding: 80px 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1574071318508-1cdbad80ad38?auto=format&fit=crop&q=80&w=2000');
+            padding: 100px 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
         }
@@ -61,13 +59,6 @@
             letter-spacing: 2px;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-
         .cta-button {
             display: inline-block;
             padding: 15px 40px;
@@ -77,112 +68,35 @@
             font-weight: 600;
             border-radius: 5px;
             transition: transform 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-        }
-
-        /* Menu Section */
-        .menu-section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .menu-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 30px;
-            border-radius: 10px;
-            border-left: 3px solid var(--gold);
-            position: relative;
-        }
-
-        .price {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            color: var(--gold);
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-
-        .menu-item h3 {
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-
-        .menu-item p {
-            font-size: 0.95rem;
-            color: #ccc;
-        }
-
-        .highlight {
-            font-style: italic;
-            color: var(--gold);
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        /* About Section */
-        .about-section {
-            background-color: #1a1a1a;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .contact-info {
-            font-size: 1.5rem;
-            margin: 20px 0;
-        }
-
-        .contact-info a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        .social-link {
-            display: block;
             margin-top: 20px;
-            font-size: 1.1rem;
         }
 
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.8rem;
-            opacity: 0.6;
-            border-top: 1px solid rgba(197, 160, 89, 0.1);
+        .cta-button:hover { transform: scale(1.05); }
+
+        .image-break {
+            width: 100%;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1574071318508-1cdbad80ad38?auto=format&fit=crop&q=80&w=1500') center/cover no-repeat;
+            margin: 40px 0;
+            border-top: 2px solid var(--gold);
+            border-bottom: 2px solid var(--gold);
         }
+
+        .menu-section { padding: 80px 0; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .menu-item { background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 10px; border-left: 3px solid var(--gold); position: relative; }
+        .price { position: absolute; top: 30px; right: 30px; color: var(--gold); font-weight: 600; font-size: 1.2rem; }
+
+        .about-section { background-color: #1a1a1a; padding: 80px 0; text-align: center; }
+        .contact-section { padding: 80px 0; text-align: center; }
+        .contact-info a { color: var(--gold); text-decoration: none; font-size: 1.5rem; display: block; margin: 10px 0; }
+
+        footer { padding: 40px 0; text-align: center; font-size: 0.8rem; opacity: 0.6; border-top: 1px solid rgba(197, 160, 89, 0.1); }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
-            .menu-grid { grid-template-columns: 1fr; }
+            .image-break { height: 250px; }
         }
     </style>
 </head>
@@ -190,7 +104,6 @@
 
     <header>
         <div class="container">
-            <!-- For GitHub hosting, the user should name their logo file 'logo.png' in the same folder -->
             <img src="logo.png" alt="Stellar Pizza Logo" class="logo">
         </div>
     </header>
@@ -198,17 +111,18 @@
     <section class="hero">
         <div class="container">
             <h1>Fire Baked Authentic Pizza</h1>
-            <p>Hand-stretched dough. 24-hour fermentation. Fired at 450°C. <br>The true taste of Naples, served from our trailer to your hands.</p>
-            <a href="tel:07598251416" class="cta-button">Order Now: 07598251416</a>
+            <p>Hand-stretched dough. 24-hour fermentation. Fired at 450&deg;C.</p>
+            <a href="tel:07598251416" class="cta-button">Order: 07598251416</a>
         </div>
     </section>
 
+    <!-- Visual Pizza Feature -->
+    <div class="image-break"></div>
+
     <section class="about-section">
         <div class="container">
-            <div class="about-content">
-                <h2>Our Philosophy</h2>
-                <p>We use high-quality artisanal ingredients, featuring authentic <strong>Fior di latte</strong> mozzarella, San Marzano tomatoes, and <strong>Extra Virgin Olive Oil</strong>. Every pizza is a masterpiece of fire and tradition.</p>
-            </div>
+            <h2>The Stellar Standard</h2>
+            <p>Hand-crafted Neapolitan pizza using <strong>Fior di latte</strong>, San Marzano tomatoes, and <strong>Extra Virgin Olive Oil</strong>. Simple, artisanal, and authentic.</p>
         </div>
     </section>
 
@@ -216,35 +130,26 @@
         <div class="container">
             <div class="section-title">
                 <h2>The Menu</h2>
-                <p>Simple. Fresh. Stellar.</p>
             </div>
-
             <div class="menu-grid">
-                <!-- Margherita -->
                 <div class="menu-item">
-                    <span class="price">£11</span>
-                    <span class="highlight">"Not just a Margherita!"</span>
+                    <span class="price">&pound;11</span>
+                    <span style="font-style: italic; color: var(--gold); display: block; margin-bottom: 5px;">"Not just a Margherita!"</span>
                     <h3>The Classic Margherita</h3>
                     <p>San Marzano Tomato, Fior di Latte Mozzarella, Parmesan, Fresh Basil, Oregano, Extra Virgin Olive Oil.</p>
                 </div>
-
-                <!-- Pepperoni -->
                 <div class="menu-item">
-                    <span class="price">£12</span>
+                    <span class="price">&pound;12</span>
                     <h3>The Pepperoni Star</h3>
                     <p>San Marzano Tomato, Fior di Latte Mozzarella, Parmesan, Premium Pepperoni. Finished with Fresh Basil, Extra Virgin Olive Oil, and Parmesan.</p>
                 </div>
-
-                <!-- Garden -->
                 <div class="menu-item">
-                    <span class="price">£12</span>
+                    <span class="price">&pound;12</span>
                     <h3>The Stellar Garden (V)</h3>
                     <p>San Marzano Tomato, Fior di Latte Mozzarella, Roasted Red Peppers, Chestnut Mushrooms, Sweetcorn, Red Onions. Finished with Extra Virgin Olive Oil and Parmesan.</p>
                 </div>
-
-                <!-- Chicken -->
                 <div class="menu-item">
-                    <span class="price">£13</span>
+                    <span class="price">&pound;13</span>
                     <h3>The Roast Chicken</h3>
                     <p>San Marzano Tomato, Fior di Latte Mozzarella, Roasted Chicken Thigh, Red Onions. Finished with Extra Virgin Olive Oil and Parmesan.</p>
                 </div>
@@ -254,22 +159,20 @@
 
     <section class="contact-section">
         <div class="container">
-            <h2>Find the Trailer</h2>
-            <p>Follow our journey on Instagram for daily locations and opening times.</p>
+            <h2>Place Your Order At:</h2>
             <div class="contact-info">
-                <a href="https://instagram.com/Stellarpizzalondon" target="_blank">@Stellarpizzalondon</a><br>
                 <a href="tel:07598251416">07598251416</a>
+                <a href="https://instagram.com/Stellarpizzalondon" target="_blank" style="font-size: 1.1rem;">@Stellarpizzalondon</a>
             </div>
-            <p><strong>Launching 17th April - Walk-ups Welcome!</strong></p>
+            <p style="margin-top:30px;"><strong>Launching 17th April</strong></p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Stellar Pizza. All Rights Reserved. Handmade with fire and flour.</p>
+            <p>&copy; 2024 Stellar Pizza. Handmade with fire and flour.</p>
         </div>
     </footer>
 
 </body>
 </html>
-
